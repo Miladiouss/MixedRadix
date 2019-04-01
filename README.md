@@ -2,7 +2,17 @@
 This is a python package for handling mixed radix number system (non-constant base), their representation, and basic arithmetics.
 
 The most commonly used example  of mixed radix numbers is representation of week day, hours, minutes, and seconds. The radix for this system is `[7, 24, 60, 60]`. Visit [this Wikipedia page](https://en.wikipedia.org/wiki/Mixed_radix) to learn more about mixed radix number systems.
+## How to use?
+1. Download this repository to your desired directory (`<MixedRadix_dir>`).
+2. Add the following to your Python code to import it locally:
+```Python
+import sys
+sys.path.append(<MixedRadix_dir>)
+from MixedRadix import MixedRadix
+```
+No package dependencies. Written in Python 3.
 
+## Why Mixed Radix?
 Mixed radix numbers systems are specially useful in computing. A useful (not necessary the most common) application of mixed numbers in computer science is listing all the possible paths in a list of lists. Consider a list with the following lists as its elements:
 
 ```
@@ -80,7 +90,8 @@ Tag Index |       Path Index      |                  Path
    +34    :   [2, 1, 2, 0, 0]     :     ['02', '11', '22', '30', '40']
    +35    :   [2, 1, 2, 0, 1]     :     ['02', '11', '22', '30', '41']
 ```
-
+## Circular Numbers
 Another useful feature of MixedRadix is its capability to behave modularly. By setting `overflowMethod` to `modular`, if the value of the number increases beyond what can be represented using the radix, it will loop around in a modular fashion. 
 
+## Feedback and Contact
 I would appreciate improvements, comments, and feedbacks ( my github username @ gmail.com). Thanks!
