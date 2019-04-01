@@ -15,7 +15,7 @@ A = [
     ]
 ```
 
-Let's select an element from each row. `['01', '10', '22', '30', '40']` is one option (or path) out of 3x2x3x1x2 = 36 possible paths. A more systematic way of extracting paths is by using mixed radix number systems. The radix corresponding to the above is `[3, 2, 3, 1, 2]`. Now, in order to print all the possible paths, we first use a for loop to extract the length of each row and set that to the radix of a `MixedRadix` object initialized at 0. Looping over all the possible path indices by increasing its value by 1, will result in generating all the possible paths. The list of digits of this number are equivalent to the index representation of a path. A path can be used to extract all the elements of `A` corresponding to that path (see the example below). I my opinion this is a simple and elegant solution for walking over the space of all possible paths, especially if the number of rows and length of each one can vary from run to run and a tagging mechanism is needed. `MixedRadix` represent digits and radix in reverse over as well in case you want to vary the path from the base (root), rather than the tail (leaf) (see `MixedRadix` docstring).
+Let's select an element from each row. `['01', '10', '22', '30', '40']` is one option (or path) out of 3x2x3x1x2 = 36 possible paths. A more systematic way of extracting paths is by using mixed radix number systems. The radix corresponding to the above is `[3, 2, 3, 1, 2]`. Now, in order to print all the possible paths, we first use a for loop to extract the length of each row and set that to the radix of a `MixedRadix` object initialized at 0. Looping over all the possible path indices by increasing its value by 1 will result in generating all the possible paths. The list of digits of this number are equivalent to the index representation of a path. A path can be used to extract all the elements of `A` corresponding to that path (see the example below). In my opinion this is a simple and elegant solution for walking over the space of all possible paths, especially if the number of rows and length of each one can vary from run to run and a tagging mechanism is needed. MixedRadix represents `digits` and `radix` in reverse over as well (`digitsR` and `radixR`); this could be useful if you want to vary the path from the base (root), rather than the tail (leaf) (see `MixedRadix` docstring).
 
 ```Python
 # Construct a mixed radix number object
@@ -81,6 +81,6 @@ Tag Index |       Path Index      |                  Path
    +35    :   [2, 1, 2, 0, 1]     :     ['02', '11', '22', '30', '41']
 ```
 
-Another useful feature of MixedRadix is its capability to behave modularly. By setting `overflowMethod` to `modular`, if the value of the number increases beyond what can be represented using the radix, it will loop around in modular fashion. 
+Another useful feature of MixedRadix is its capability to behave modularly. By setting `overflowMethod` to `modular`, if the value of the number increases beyond what can be represented using the radix, it will loop around in a modular fashion. 
 
-I would appreciate improvements, comments, and feed back ( my github username @ gmail.com). Thanks!
+I would appreciate improvements, comments, and feedbacks ( my github username @ gmail.com). Thanks!
