@@ -143,10 +143,10 @@ class MixedRadix():
         radix = self.radix
         if isinstance(other, int):
             val2 = other
-        elif isinstance(other, MixRadix):
+        elif isinstance(other, MixedRadix):
             val2 = other.value
         
-        output = MixRadix(val1 + val2, radix)
+        output = MixedRadix(val1 + val2, radix)
         
         return output
 
@@ -160,10 +160,10 @@ class MixedRadix():
         radix = self.radix
         if isinstance(other, int):
             val2 = other
-        elif isinstance(other, MixRadix):
+        elif isinstance(other, MixedRadix):
             val2 = other.value
         
-        output = MixRadix(val1 - val2, radix)
+        output = MixedRadix(val1 - val2, radix)
         
         return output
     
@@ -176,10 +176,10 @@ class MixedRadix():
         radix = self.radix
         if isinstance(other, int):
             val2 = other
-        elif isinstance(other, MixRadix):
+        elif isinstance(other, MixedRadix):
             val2 = other.value
         
-        output = MixRadix(val1 * val2, radix)
+        output = MixedRadix(val1 * val2, radix)
         
         return output
     
@@ -192,7 +192,7 @@ class MixedRadix():
         radix = self.radix
         if isinstance(other, int):
             val2 = other
-        elif isinstance(other, MixRadix):
+        elif isinstance(other, MixedRadix):
             val2 = other.value
                 
         self.value = val1 + val2
@@ -233,7 +233,7 @@ class MixedRadix():
         return pvR[::-1]
     
 if __name__ is '__main__':
-    a = MixRadix(-5, [2, 1, 3, 2])
+    a = MixedRadix(-5, [2, 1, 3, 2])
     print('Radix        : {}'.format(a.radix))
     print('Place Values : {}'.format(a.placeValues))
     print('maxVal       : {}'.format(a.maxVal))
