@@ -1,4 +1,4 @@
-class MixRadix():
+class MixedRadix():
     def __init__(self, value = None, radix = None, digits = None, overflowMethod = 'relaxed', maxRadixLength = 8):
         '''
         value:
