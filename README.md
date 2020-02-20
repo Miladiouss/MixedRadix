@@ -1,5 +1,6 @@
 # MixedRadix
-This is a python package for handling mixed radix number system (non-constant base), their representation, and basic arithmetics.
+Modular arithmatic in Python. 
+This is a Python package for handling mixed radix number system (non-constant base), their representation, and basic arithmetics.
 
 The most commonly used example  of mixed radix numbers is representation of week day, hours, minutes, and seconds. The radix for this system is `[7, 24, 60, 60]`. Visit [this Wikipedia page](https://en.wikipedia.org/wiki/Mixed_radix) to learn more about mixed radix number systems.
 ## How to use?
